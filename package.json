@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cxyxiaoyuyu/gulu/issues"
   },
-  "homepage": "https://github.com/cxyxiaoyuyu/gulu#readme"
+  "homepage": "https://github.com/cxyxiaoyuyu/gulu#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
