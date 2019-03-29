@@ -20,7 +20,7 @@
     .g-button:hover {
         border-color: var(--border-color-hover); 
     }
-    .g-bottom:active {
+    .g-button:active {
         background-color: var(--button-active-bg);
     }
     .g-button:focus {
