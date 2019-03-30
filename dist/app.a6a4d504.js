@@ -12419,18 +12419,18 @@ exports.default = void 0;
 //
 //
 var _default = {
-  props: ['iconName', 'iconPosition']
-  /*props:{
-      iconName: {},
-      iconPosition: {
-          type: String,
-          default: 'left',
-          Validator(value){
-              console.log(value)
-          }
+  //props: ['iconName','iconPosition']
+  props: {
+    iconName: {},
+    iconPosition: {
+      type: String,
+      default: 'icon-left',
+      validator: function validator(value) {
+        console.log(value);
+        return value === 'icon-left' || value === 'icon-right';
       }
-  }*/
-
+    }
+  }
 };
 exports.default = _default;
         var $e747ff = exports.default || module.exports;

@@ -7,17 +7,18 @@
 
 <script>
     export default {
-        props: ['iconName','iconPosition']
-        /*props:{
+        //props: ['iconName','iconPosition']
+        props:{
             iconName: {},
             iconPosition: {
                 type: String,
-                default: 'left',
-                Validator(value){
+                default: 'icon-left',
+                validator(value){
                     console.log(value)
+                    return value === 'icon-left' || value === 'icon-right'
                 }
             }
-        }*/
+        }
     }
 </script>
 
@@ -45,12 +46,12 @@
     }
     .g-button.icon-right {
         flex-direction: row-reverse;
+        &>.icon {
+            margin-left: .2em;
+        }
     }
     .g-button.icon-left .icon {
         margin-right: .2em;
-    }
-    .g-button>.icon-right .icon {
-        margin-left: .2em;
     }
 </style>
 
