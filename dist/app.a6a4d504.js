@@ -12418,6 +12418,7 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   //props: ['iconName','iconPosition']
   props: {
@@ -12449,6 +12450,8 @@ exports.default = _default;
     "button",
     { staticClass: "g-button", class: _vm.iconPosition },
     [
+      _c("g-icon", { attrs: { "icon-name": "loading" } }),
+      _vm._v(" "),
       _vm.iconName
         ? _c("g-icon", { attrs: { "icon-name": _vm.iconName } })
         : _vm._e(),

@@ -1,5 +1,6 @@
 <template>
     <button class="g-button" :class="iconPosition">
+        <g-icon icon-name="loading"></g-icon>
         <g-icon v-if=iconName :icon-name="iconName"></g-icon>
         <slot></slot>
     </button>
