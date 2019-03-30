@@ -12404,7 +12404,101 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"src/button.vue":[function(require,module,exports) {
+},{}],"src/button-group.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+var _default = {};
+exports.default = _default;
+        var $f3e262 = exports.default || module.exports;
+      
+      if (typeof $f3e262 === 'function') {
+        $f3e262 = $f3e262.options;
+      }
+    
+        /* template */
+        Object.assign($f3e262, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "button-group",
+      class: _vm.iconPosition,
+      on: {
+        click: function($event) {
+          return _vm.$emit("click")
+        }
+      }
+    },
+    [
+      _c(
+        "g-button",
+        {
+          staticClass: "button",
+          attrs: { "icon-name": "left", "icon-position": "icon-left" }
+        },
+        [_vm._v("按钮")]
+      ),
+      _vm._v(" "),
+      _c(
+        "g-button",
+        {
+          staticClass: "button",
+          attrs: { "icon-name": "right", "icon-position": "icon-right" }
+        },
+        [_vm._v("设置")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f3e262', $f3e262);
+          } else {
+            api.reload('$f3e262', $f3e262);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12579,6 +12673,8 @@ render._withStripped = true
 
 var _vue = _interopRequireDefault(require("vue"));
 
+var _buttonGroup = _interopRequireDefault(require("./button-group"));
+
 var _button = _interopRequireDefault(require("./button"));
 
 var _icon = _interopRequireDefault(require("./icon"));
@@ -12591,6 +12687,8 @@ _vue.default.component('g-button', _button.default);
 
 _vue.default.component('g-icon', _icon.default);
 
+_vue.default.component('button-group', _buttonGroup.default);
+
 new _vue.default({
   el: '#app',
   data: {
@@ -12600,7 +12698,7 @@ new _vue.default({
     loading4: true
   }
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue"}],"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button-group":"src/button-group.vue","./button":"src/button.vue","./icon":"src/icon.vue"}],"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
