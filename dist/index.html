@@ -20,15 +20,14 @@
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
     <div id="app">
-        <g-button>按钮</g-button>
-        <g-button icon-name="setting" icon-position="icon-left">设置</g-button>
-        <g-button icon-name="download" icon-position="icon-right">下载</g-button>
+        <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
+        <g-button icon-name="setting" icon-position="icon-left" :loading="loading2" @click="loading2 = !loading2">设置</g-button>
+        <g-button icon-name="download" icon-position="icon-right" :loading="loading3" @click="loading3 = !loading3">下载</g-button>
         <g-button icon-name="download" icon-position="icon-up">下载</g-button>
-        <g-icon icon-name="left"></g-icon>
     </div>
 <script src="/app.a6a4d504.js"></script>
 <script>
-    
+
 </script>
 </body>
 </html>
