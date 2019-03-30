@@ -19,7 +19,6 @@
                 type: String,
                 default: 'icon-left',
                 validator(value){
-                    console.log(value)
                     return value === 'icon-left' || value === 'icon-right'
                 }
             }
