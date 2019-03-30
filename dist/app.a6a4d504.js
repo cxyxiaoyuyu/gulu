@@ -12450,7 +12450,7 @@ exports.default = _default;
           staticClass: "button",
           attrs: { "icon-name": "left", "icon-position": "icon-left" }
         },
-        [_vm._v("按钮")]
+        [_vm._v("上一页")]
       ),
       _vm._v(" "),
       _c(
@@ -12459,7 +12459,7 @@ exports.default = _default;
           staticClass: "button",
           attrs: { "icon-name": "right", "icon-position": "icon-right" }
         },
-        [_vm._v("设置")]
+        [_vm._v("下一页")]
       )
     ],
     1
