@@ -18,15 +18,17 @@
   },
   "homepage": "https://github.com/cxyxiaoyuyu/gulu#readme",
   "dependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.6.0",
-    "parcel-bundler": "^1.12.3",
+    "sass": "^1.17.3",
     "vue-template-compiler": "^2.6.10"
   },
   "alias": {
-      "vue" : "./node_modules/vue/dist/vue.common.js"
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }

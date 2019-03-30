@@ -1,0 +1,20 @@
+<template>
+    <svg class="icon" aria-hidden="true" :class="iconName">
+        <use :xlink:href="`#icon-${iconName}`"></use>
+    </svg> 
+</template>
+
+<script>
+    export default {
+        props: ['iconName']
+    }
+</script>
+
+<style lang="scss">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+</style>

@@ -1,11 +1,24 @@
 <template>
-    <button class="g-button">
+    <button class="g-button" :class="iconName">
+        <g-icon v-if=iconName :icon-name="iconName"></g-icon>
         <slot></slot>
     </button>
 </template>
 
 <script>
-    export default {}
+    export default {
+        props: ['iconName']
+        /*props:{
+            iconName: {},
+            iconPosition: {
+                type: String,
+                default: 'left',
+                Validator(value){
+                    console.log(value)
+                }
+            }
+        }*/
+    }
 </script>
 
 <style lang="scss">
@@ -16,15 +29,25 @@
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
-    }
-    .g-button:hover {
-        border-color: var(--border-color-hover); 
-    }
-    .g-button:active {
-        background-color: var(--button-active-bg);
-    }
-    .g-button:focus {
-        outline: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        &:hover {
+            border-color: var(--border-color-hover); 
+        }
+        &:active {
+            background-color: var(--button-active-bg);
+        }
+        &:focus {
+            outline: none;
+        }
+        &.icon-left .icon {
+            margin-right: .2em;
+        }
+        &>.icon-right .icon {
+            margin-left: .2em;
+        }
     }
 </style>
 
