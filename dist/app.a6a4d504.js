@@ -12450,7 +12450,10 @@ exports.default = _default;
     "button",
     { staticClass: "g-button", class: _vm.iconPosition },
     [
-      _c("g-icon", { attrs: { "icon-name": "loading" } }),
+      _c("g-icon", {
+        staticClass: "loading",
+        attrs: { "icon-name": "loading" }
+      }),
       _vm._v(" "),
       _vm.iconName
         ? _c("g-icon", { attrs: { "icon-name": _vm.iconName } })

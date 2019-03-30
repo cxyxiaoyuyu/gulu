@@ -1,6 +1,6 @@
 <template>
     <button class="g-button" :class="iconPosition">
-        <g-icon icon-name="loading"></g-icon>
+        <g-icon icon-name="loading" class="loading"></g-icon>
         <g-icon v-if=iconName :icon-name="iconName"></g-icon>
         <slot></slot>
     </button>
@@ -43,6 +43,17 @@
         }
         &:focus {
             outline: none;
+        }
+        & > .loading {
+            animation: loading 2s infinite linear;
+        }
+    }
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
         }
     }
     .g-button.icon-right {
