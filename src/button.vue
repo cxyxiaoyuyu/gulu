@@ -10,7 +10,10 @@
     export default {
         //props: ['iconName','iconPosition']
         props:{
-            loading: {},
+            loading: {
+                type: Boolean,
+                default: false
+            },
             iconName: {},
             iconPosition: {
                 type: String,
