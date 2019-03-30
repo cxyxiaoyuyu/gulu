@@ -12419,7 +12419,7 @@ exports.default = void 0;
 //
 //
 var _default = {
-  props: ['iconName']
+  props: ['iconName', 'iconPosition']
   /*props:{
       iconName: {},
       iconPosition: {
@@ -12447,7 +12447,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "button",
-    { staticClass: "g-button", class: _vm.iconName },
+    { staticClass: "g-button", class: _vm.iconPosition },
     [
       _vm.iconName
         ? _c("g-icon", { attrs: { "icon-name": _vm.iconName } })
@@ -12520,15 +12520,9 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "svg",
-    {
-      staticClass: "icon",
-      class: _vm.iconName,
-      attrs: { "aria-hidden": "true" }
-    },
-    [_c("use", { attrs: { "xlink:href": "#icon-" + _vm.iconName } })]
-  )
+  return _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
+    _c("use", { attrs: { "xlink:href": "#icon-" + _vm.iconName } })
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

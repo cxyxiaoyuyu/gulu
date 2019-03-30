@@ -19,9 +19,15 @@
 .g-button:focus {
   outline: none;
 }
+
+.g-button.icon-right {
+  flex-direction: row-reverse;
+}
+
 .g-button.icon-left .icon {
   margin-right: 0.2em;
 }
+
 .g-button > .icon-right .icon {
   margin-left: 0.2em;
 }

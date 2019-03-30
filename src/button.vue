@@ -1,5 +1,5 @@
 <template>
-    <button class="g-button" :class="iconName">
+    <button class="g-button" :class="iconPosition">
         <g-icon v-if=iconName :icon-name="iconName"></g-icon>
         <slot></slot>
     </button>
@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        props: ['iconName']
+        props: ['iconName','iconPosition']
         /*props:{
             iconName: {},
             iconPosition: {
@@ -42,12 +42,15 @@
         &:focus {
             outline: none;
         }
-        &.icon-left .icon {
-            margin-right: .2em;
-        }
-        &>.icon-right .icon {
-            margin-left: .2em;
-        }
+    }
+    .g-button.icon-right {
+        flex-direction: row-reverse;
+    }
+    .g-button.icon-left .icon {
+        margin-right: .2em;
+    }
+    .g-button>.icon-right .icon {
+        margin-left: .2em;
     }
 </style>
 
