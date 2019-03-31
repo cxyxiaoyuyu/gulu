@@ -1,8 +1,9 @@
 {
   "name": "xiaoyu-test-1",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "./dist/index.js",
+  "files": ["dist/**/*"],
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
