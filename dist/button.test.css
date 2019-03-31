@@ -1,0 +1,43 @@
+.g-button {
+  font-size: var(--font-size);
+  height: var(--button-height);
+  padding: 0 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background: var(--button-bg);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.g-button:hover {
+  border-color: var(--border-color-hover);
+}
+.g-button:active {
+  background-color: var(--button-active-bg);
+}
+.g-button:focus {
+  outline: none;
+}
+.g-button > .loading {
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.g-button.icon-right {
+  flex-direction: row-reverse;
+}
+.g-button.icon-right > .icon {
+  margin-left: 0.2em;
+}
+
+.g-button.icon-left .icon {
+  margin-right: 0.2em;
+}
