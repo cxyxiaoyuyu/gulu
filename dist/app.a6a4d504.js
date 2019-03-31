@@ -12421,11 +12421,11 @@ exports.default = void 0;
 var _default = {};
 exports.default = _default;
         var $f3e262 = exports.default || module.exports;
-      
+
       if (typeof $f3e262 === 'function') {
         $f3e262 = $f3e262.options;
       }
-    
+
         /* template */
         Object.assign($f3e262, (function () {
           var render = function() {
@@ -12476,7 +12476,7 @@ render._withStripped = true
             functional: undefined
           };
         })());
-      
+
     /* hot reload */
     (function () {
       if (module.hot) {
@@ -12491,11 +12491,11 @@ render._withStripped = true
           }
         }
 
-        
+
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-      
+
       }
     })();
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/icon.vue":[function(require,module,exports) {
@@ -12516,11 +12516,11 @@ var _default = {
 };
 exports.default = _default;
         var $c8f422 = exports.default || module.exports;
-      
+
       if (typeof $c8f422 === 'function') {
         $c8f422 = $c8f422.options;
       }
-    
+
         /* template */
         Object.assign($c8f422, (function () {
           var render = function() {
@@ -12542,7 +12542,7 @@ render._withStripped = true
             functional: undefined
           };
         })());
-      
+
     /* hot reload */
     (function () {
       if (module.hot) {
@@ -12557,11 +12557,11 @@ render._withStripped = true
           }
         }
 
-        
+
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-      
+
       }
     })();
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button.vue":[function(require,module,exports) {
@@ -12606,11 +12606,11 @@ var _default = {
 };
 exports.default = _default;
         var $e747ff = exports.default || module.exports;
-      
+
       if (typeof $e747ff === 'function') {
         $e747ff = $e747ff.options;
       }
-    
+
         /* template */
         Object.assign($e747ff, (function () {
           var render = function() {
@@ -12656,7 +12656,7 @@ render._withStripped = true
             functional: undefined
           };
         })());
-      
+
     /* hot reload */
     (function () {
       if (module.hot) {
@@ -12671,11 +12671,11 @@ render._withStripped = true
           }
         }
 
-        
+
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-      
+
       }
     })();
 },{"./icon":"src/icon.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"node_modules/assertion-error/index.js":[function(require,module,exports) {
