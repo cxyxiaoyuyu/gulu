@@ -12064,7 +12064,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./vue.common.dev.js');
 }
-},{"./vue.common.dev.js":"node_modules/vue/dist/vue.common.dev.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./vue.common.dev.js":"node_modules/vue/dist/vue.common.dev.js"}],"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -12096,7 +12096,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -12131,7 +12131,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -12404,7 +12404,7 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"src/button-group.vue":[function(require,module,exports) {
+},{}],"src/icon.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12417,15 +12417,204 @@ exports.default = void 0;
 //
 //
 //
+var _default = {
+  props: ['iconName']
+};
+exports.default = _default;
+        var $c8f422 = exports.default || module.exports;
+      
+      if (typeof $c8f422 === 'function') {
+        $c8f422 = $c8f422.options;
+      }
+    
+        /* template */
+        Object.assign($c8f422, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
+    _c("use", { attrs: { "xlink:href": "#icon-" + _vm.iconName } })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$c8f422', $c8f422);
+          } else {
+            api.reload('$c8f422', $c8f422);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/Button.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _icon = _interopRequireDefault(require("./icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //
-var _default = {};
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  //props: ['iconName','iconPosition']
+  components: {
+    'g-icon': _icon.default
+  },
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    iconName: {},
+    iconPosition: {
+      type: String,
+      default: 'icon-left',
+      validator: function validator(value) {
+        return value === 'icon-left' || value === 'icon-right';
+      }
+    }
+  }
+};
+exports.default = _default;
+        var $39c575 = exports.default || module.exports;
+      
+      if (typeof $39c575 === 'function') {
+        $39c575 = $39c575.options;
+      }
+    
+        /* template */
+        Object.assign($39c575, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "button",
+    {
+      staticClass: "g-button",
+      class: _vm.iconPosition,
+      on: {
+        click: function($event) {
+          return _vm.$emit("click")
+        }
+      }
+    },
+    [
+      _vm.loading
+        ? _c("g-icon", {
+            staticClass: "loading",
+            attrs: { "icon-name": "loading" }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.iconName && !_vm.loading
+        ? _c("g-icon", { attrs: { "icon-name": _vm.iconName } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$39c575', $39c575);
+          } else {
+            api.reload('$39c575', $39c575);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./icon":"src/icon.vue","_css_loader":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button-group.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _Button = _interopRequireDefault(require("./Button"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  components: {
+    'g-button': _Button.default
+  }
+};
 exports.default = _default;
         var $f3e262 = exports.default || module.exports;
-
+      
       if (typeof $f3e262 === 'function') {
         $f3e262 = $f3e262.options;
       }
-
+    
         /* template */
         Object.assign($f3e262, (function () {
           var render = function() {
@@ -12476,7 +12665,7 @@ render._withStripped = true
             functional: undefined
           };
         })());
-
+      
     /* hot reload */
     (function () {
       if (module.hot) {
@@ -12491,80 +12680,14 @@ render._withStripped = true
           }
         }
 
-
+        
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-
+      
       }
     })();
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/icon.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-var _default = {
-  props: ['iconName']
-};
-exports.default = _default;
-        var $c8f422 = exports.default || module.exports;
-
-      if (typeof $c8f422 === 'function') {
-        $c8f422 = $c8f422.options;
-      }
-
-        /* template */
-        Object.assign($c8f422, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
-    _c("use", { attrs: { "xlink:href": "#icon-" + _vm.iconName } })
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$c8f422', $c8f422);
-          } else {
-            api.reload('$c8f422', $c8f422);
-          }
-        }
-
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-
-      }
-    })();
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button.vue":[function(require,module,exports) {
+},{"./Button":"src/Button.vue","_css_loader":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12606,11 +12729,11 @@ var _default = {
 };
 exports.default = _default;
         var $e747ff = exports.default || module.exports;
-
+      
       if (typeof $e747ff === 'function') {
         $e747ff = $e747ff.options;
       }
-
+    
         /* template */
         Object.assign($e747ff, (function () {
           var render = function() {
@@ -12656,7 +12779,7 @@ render._withStripped = true
             functional: undefined
           };
         })());
-
+      
     /* hot reload */
     (function () {
       if (module.hot) {
@@ -12671,14 +12794,14 @@ render._withStripped = true
           }
         }
 
-
+        
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-
+      
       }
     })();
-},{"./icon":"src/icon.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"node_modules/assertion-error/index.js":[function(require,module,exports) {
+},{"./icon":"src/icon.vue","_css_loader":"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"node_modules/assertion-error/index.js":[function(require,module,exports) {
 /*!
  * assertion-error
  * Copyright(c) 2013 Jake Luer <jake@qualiancy.com>
@@ -23752,11 +23875,8 @@ var _chaiSpies = _interopRequireDefault(require("chai-spies"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(_button.default);
-
-_vue.default.component('g-button', _button.default);
-
-_vue.default.component('g-icon', _icon.default);
+console.log(_button.default); //Vue.component('g-button',Button)
+//Vue.component('g-icon',Icon)
 
 _vue.default.component('button-group', _buttonGroup.default);
 
@@ -23882,7 +24002,7 @@ var expect = _chai.default.expect;
   button.click();
   expect(spy).to.have.been.called();
 }
-},{"vue":"node_modules/vue/dist/vue.common.js","./button-group":"src/button-group.vue","./button":"src/button.vue","./icon":"src/icon.vue","chai":"node_modules/chai/index.js","chai-spies":"node_modules/chai-spies/chai-spies.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button-group":"src/button-group.vue","./button":"src/button.vue","./icon":"src/icon.vue","chai":"node_modules/chai/index.js","chai-spies":"node_modules/chai-spies/chai-spies.js"}],"C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -23910,7 +24030,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59023" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50986" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -24085,5 +24205,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/app.js"], null)
+},{}]},{},["C:/Users/CXY/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/app.js"], null)
 //# sourceMappingURL=/app.a6a4d504.js.map

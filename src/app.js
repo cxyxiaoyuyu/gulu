@@ -5,8 +5,8 @@ import Icon from './icon'
 
 
 console.log(Button)
-Vue.component('g-button',Button)
-Vue.component('g-icon',Icon)
+//Vue.component('g-button',Button)
+//Vue.component('g-icon',Icon)
 Vue.component('button-group',ButtonGroup)
 
 new Vue({

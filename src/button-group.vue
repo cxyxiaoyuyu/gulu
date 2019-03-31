@@ -6,7 +6,12 @@
 </template>
 
 <script>
-    export default {}
+    import Button from './Button'
+    export default {
+        components: {
+            'g-button': Button
+        }
+    }
 </script>
 
 <style lang="scss">

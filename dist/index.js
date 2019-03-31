@@ -135,11 +135,11 @@ var _default = {
 };
 exports.default = _default;
         var $c8f422 = exports.default || module.exports;
-
+      
       if (typeof $c8f422 === 'function') {
         $c8f422 = $c8f422.options;
       }
-
+    
         /* template */
         Object.assign($c8f422, (function () {
           var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{staticClass:"icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":("#icon-" + _vm.iconName)}})])}
@@ -153,7 +153,7 @@ var staticRenderFns = []
             functional: undefined
           };
         })());
-
+      
 },{}],"iM1m":[function(require,module,exports) {
 "use strict";
 
@@ -196,11 +196,11 @@ var _default = {
 };
 exports.default = _default;
         var $e747ff = exports.default || module.exports;
-
+      
       if (typeof $e747ff === 'function') {
         $e747ff = $e747ff.options;
       }
-
+    
         /* template */
         Object.assign($e747ff, (function () {
           var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"g-button",class:_vm.iconPosition,on:{"click":function($event){return _vm.$emit('click')}}},[(_vm.loading)?_c('g-icon',{staticClass:"loading",attrs:{"icon-name":"loading"}}):_vm._e(),_vm._v(" "),(_vm.iconName && !_vm.loading)?_c('g-icon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),_vm._v(" "),_vm._t("default")],2)}
@@ -214,7 +214,68 @@ var staticRenderFns = []
             functional: undefined
           };
         })());
+      
+},{"./icon":"wFXB"}],"Qa4M":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _icon = _interopRequireDefault(require("./icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  //props: ['iconName','iconPosition']
+  components: {
+    'g-icon': _icon.default
+  },
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    iconName: {},
+    iconPosition: {
+      type: String,
+      default: 'icon-left',
+      validator: function validator(value) {
+        return value === 'icon-left' || value === 'icon-right';
+      }
+    }
+  }
+};
+exports.default = _default;
+        var $39c575 = exports.default || module.exports;
+      
+      if (typeof $39c575 === 'function') {
+        $39c575 = $39c575.options;
+      }
+    
+        /* template */
+        Object.assign($39c575, (function () {
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"g-button",class:_vm.iconPosition,on:{"click":function($event){return _vm.$emit('click')}}},[(_vm.loading)?_c('g-icon',{staticClass:"loading",attrs:{"icon-name":"loading"}}):_vm._e(),_vm._v(" "),(_vm.iconName && !_vm.loading)?_c('g-icon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),_vm._v(" "),_vm._t("default")],2)}
+var staticRenderFns = []
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
 },{"./icon":"wFXB"}],"h0wh":[function(require,module,exports) {
 "use strict";
 
@@ -222,6 +283,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _Button = _interopRequireDefault(require("./Button"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //
 //
 //
@@ -229,14 +295,18 @@ exports.default = void 0;
 //
 //
 //
-var _default = {};
+var _default = {
+  components: {
+    'g-button': _Button.default
+  }
+};
 exports.default = _default;
         var $f3e262 = exports.default || module.exports;
-
+      
       if (typeof $f3e262 === 'function') {
         $f3e262 = $f3e262.options;
       }
-
+    
         /* template */
         Object.assign($f3e262, (function () {
           var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"button-group",class:_vm.iconPosition,on:{"click":function($event){return _vm.$emit('click')}}},[_c('g-button',{staticClass:"button",attrs:{"icon-name":"left","icon-position":"icon-left"}},[_vm._v("上一页")]),_vm._v(" "),_c('g-button',{staticClass:"button",attrs:{"icon-name":"right","icon-position":"icon-right"}},[_vm._v("下一页")])],1)}
@@ -250,8 +320,8 @@ var staticRenderFns = []
             functional: undefined
           };
         })());
-
-},{}],"Focm":[function(require,module,exports) {
+      
+},{"./Button":"Qa4M"}],"Focm":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
