@@ -131,7 +131,7 @@ if ("production" === 'production') {
 } else {
   module.exports = require('./vue.common.dev.js');
 }
-},{"./vue.common.prod.js":"BydX"}],"qcet":[function(require,module,exports) {
+},{"./vue.common.prod.js":"BydX"}],"Bqhn":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -144,10 +144,55 @@ exports.default = void 0;
 //
 //
 //
+var _default = {
+  props: ['iconName']
+};
+exports.default = _default;
+        var $c8f422 = exports.default || module.exports;
+      
+      if (typeof $c8f422 === 'function') {
+        $c8f422 = $c8f422.options;
+      }
+    
+        /* template */
+        Object.assign($c8f422, (function () {
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{staticClass:"icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":("#icon-" + _vm.iconName)}})])}
+var staticRenderFns = []
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+},{}],"qcet":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _icon = _interopRequireDefault(require("./icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
 //
 //
 var _default = {
   //props: ['iconName','iconPosition']
+  components: {
+    'g-icon': _icon.default
+  },
   props: {
     loading: {
       type: Boolean,
@@ -184,7 +229,7 @@ var staticRenderFns = []
           };
         })());
       
-},{}],"OGAT":[function(require,module,exports) {
+},{"./icon":"Bqhn"}],"OGAT":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -197,8 +242,20 @@ var expect = chai.expect;
 _vue.default.config.productionTip = false;
 _vue.default.config.devtools = false;
 describe('Button', function () {
-  it('存在.', function () {
+  it('Button存在.', function () {
     expect(_button.default).to.be.ok;
+  });
+  it('可以设置icon.', function () {
+    var Constructor = _vue.default.extend(_button.default);
+
+    var vm = new Constructor({
+      propsData: {
+        iconName: 'setting'
+      }
+    }).$mount();
+    var useElement = vm.$el.querySelector('use');
+    expect(useElement.getAttribute('xlink:href')).to.equal('#icon-setting');
+    vm.$destroy();
   });
 });
 },{"vue":"ApMz","../src/button":"qcet"}]},{},["OGAT"], null)

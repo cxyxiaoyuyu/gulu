@@ -7,8 +7,12 @@
 </template>
 
 <script>
+    import Icon from './icon'
     export default {
         //props: ['iconName','iconPosition']
+        components: {
+            'g-icon': Icon
+        },
         props:{
             loading: {
                 type: Boolean,
