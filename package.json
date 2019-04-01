@@ -1,12 +1,14 @@
 {
   "name": "xiaoyu-test-1",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "",
   "main": "./dist/index.js",
   "files": ["dist/**/*"],
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "build": "parcel build index.js --no-cache --no-minify",
+    "start": "parcel index.html --no-cache"
   },
   "repository": {
     "type": "git",
