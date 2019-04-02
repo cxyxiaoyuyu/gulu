@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import ButtonGroup from './button-group'
 import Button from './button'
+import Input from './input'
 
 console.log(Button)
 Vue.component('g-button',Button)
 //Vue.component('g-icon',Icon)
 Vue.component('button-group',ButtonGroup)
+Vue.component( 'g-input',Input)
 
 new Vue({
     el: '#app',
