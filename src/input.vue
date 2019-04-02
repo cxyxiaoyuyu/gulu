@@ -2,6 +2,10 @@
     <div class="input-wrap">
         <input class="input" :value="value" :disabled="disabled" :readonly="readonly"
         :class="{error}"/>  
+        <template v-if="error">
+            <g-icon icon-name="error" class="errorIcon"></g-icon>
+            <span class="errorMessage">{{ error }}<span>
+        </template>
     </div>
     
 </template>
@@ -23,7 +27,9 @@
             error: {
                 type: String
             }
-
+        },
+        components: {
+            'g-icon': Icon
         }
     }
 </script>
@@ -35,10 +41,16 @@
     $border-color: #ddd;
     $border-hover-color: #999;
     $focus-shadow-color: rgba(0,0,0,.3); 
+    $red:  #F1453d;
     .input-wrap {
         font-size: $font-size;
         margin-bottom: 20px;
         display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        >:not(:last-child) {
+            margin-right: .3em;
+        }
         >.input {
             height: $height;
             border-radius: $border-radius;
@@ -64,7 +76,14 @@
             }
         }
         >.input.error {
-            border:1px solid #F1453d;
+            border:1px solid $red;
+                       
+        }
+        >.errorIcon {
+            fill: $red;
+        }
+        >.errorMessage{
+            color: $red;
         }
         
     }
