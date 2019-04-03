@@ -66,7 +66,7 @@ describe('Input', () => {
       vm.$destroy()
     })
     it('支持 change/input/focus/blur 事件', () => {
-      ['change']
+      ['change','input','focus','blur']
         .forEach((eventName) => {
           vm = new Constructor({}).$mount()
           const callback = sinon.fake();
