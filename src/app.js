@@ -16,11 +16,12 @@ new Vue({
         loading2: false,
         loading3: true,
         loading4: true,
+        message: 'Hello Vue'
     },
     methods: {
       changeInput(e){
         console.log(e)
-        console.log(e.target.value)
+     
       }
     }
 })
