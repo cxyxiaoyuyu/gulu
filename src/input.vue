@@ -4,8 +4,8 @@
         :class="{error}"
          @change="$emit('change',$event)"
          @focus="$emit('focus',$event)"
-         @change="$emit('input',$event)"
-         @change="$emit('blur',$event)"
+         @input="$emit('input',$event)"
+         @blur="$emit('blur',$event)"
         />  
         <template v-if="error">
             <g-icon icon-name="error" class="errorIcon"></g-icon>
