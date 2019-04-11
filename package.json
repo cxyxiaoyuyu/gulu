@@ -12,7 +12,7 @@
     "build": "parcel build index.js --no-cache --no-minify",
     "start": "parcel index.html --no-cache",
     "docs:dev":"vuepress dev docs",
-    "docs:build":"vuepress dev docs"
+    "docs:build":"vuepress build docs"
   },
   "repository": {
     "type": "git",
