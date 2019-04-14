@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Hello VuePress',
+  base: '/gulu/',
   description: 'Just playing around',
   themeConfig: {
     sidebar: [
@@ -13,8 +14,10 @@ module.exports = {
       {
         title: '组件',
         children: [
-            '/button/',
-            '/input/'
+            '/components/button',
+            '/components/button-group',
+            '/components/input',
+            '/components/grid',
         ]
       }
     ]
