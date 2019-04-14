@@ -13,10 +13,10 @@ module.exports = {
       {
         title: '组件',
         children: [
-            '/install/',
-            '/get_start/'
+            '/button/',
+            '/input/'
         ]
-      },
+      }
     ]
   }
 }
