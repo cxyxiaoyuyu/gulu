@@ -5,7 +5,7 @@ import Input from '../src/input'
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
-describe('Input', () => {
+describe('Input组件: ', () => {
 
   it('存在.', () => {
     expect(Input).to.exist
@@ -54,6 +54,7 @@ describe('Input', () => {
         }
       }).$mount()
       const useElement = vm.$el.querySelector('use')
+      console.log(useElement.getAttribute('xlink:href'))
       expect(useElement.getAttribute('xlink:href')).to.equal('#icon-error')
       const errorMessage = vm.$el.querySelector('.errorMessage')
       expect(errorMessage.innerText).to.equal('你错了')

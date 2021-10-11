@@ -1,32 +1,32 @@
 const expect = chai.expect;
- import Vue from 'vue'
- import Button from '../src/button'
+import Vue from 'vue'
+import Button from '../src/button'
 
- Vue.config.productionTip = false
- Vue.config.devtools = false
+Vue.config.productionTip = false
+Vue.config.devtools = false
 
- describe('Button', () => {
-     it('Button存在.', () => {
-         expect(Button).to.be.ok
-     })
-     it('可以设置icon.', () => {
+describe('Button组件: ', () => {
+    it('Button存在.', () => {
+        expect(Button).to.be.ok
+    })
+    it('可以设置icon.', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                iconName: 'setting'
+                icon: 'settings'
             }
         }).$mount()
         const useElement = vm.$el.querySelector('use')
-        expect(useElement.getAttribute('xlink:href')).to.equal('#icon-setting')
+        expect(useElement.getAttribute('xlink:href')).to.equal('#icon-settings')
         vm.$destroy()
     })
     it('可以设置loading.', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
-        propsData: {
-            iconName: 'setting',
-            loading: true
-        }
+            propsData: {
+                iconName: 'setting',
+                loading: true
+            }
         }).$mount()
         const useElements = vm.$el.querySelectorAll('use')
         expect(useElements.length).to.equal(1)
@@ -38,9 +38,9 @@ const expect = chai.expect;
         document.body.appendChild(div)
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
-        propsData: {
-            iconName: 'setting',
-        }
+            propsData: {
+                icon: 'setting',
+            }
         }).$mount(div)
         const icon = vm.$el.querySelector('svg')
         expect(getComputedStyle(icon).order).to.eq('0')
@@ -65,9 +65,9 @@ const expect = chai.expect;
     it('点击 button 触发 click 事件', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
-        propsData: {
-            iconName: 'setting',
-        }
+            propsData: {
+                iconName: 'setting',
+            }
         }).$mount()
 
         const callback = sinon.fake();
